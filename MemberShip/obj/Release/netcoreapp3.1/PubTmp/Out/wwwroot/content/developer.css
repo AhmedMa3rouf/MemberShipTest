@@ -1,0 +1,18 @@
+.childOption { color: #428bca; padding: 0 20px 0 0; }
+.childOption2 { color: #5cb85c; padding: 0 40px 0 0; }
+
+/*common*/
+.clear { clear: both; font-size: 0; line-height: 0; }
+/*validation*/
+.input-validation-error { border: solid 1px #ff0000 !important; }
+span[data-valmsg-for] { display: none !important; }
+/*Paging*/
+/*.pagination-container { text-align: center; }
+ul.pagination { margin: 10px 0 25px 0; padding: 0; }
+ul.pagination li { display: inline-block; margin: 0 2px; }
+ul.pagination li a { background: #094372; color: #fff; border: solid 1px #0f6854; padding: 6px 12px; text-decoration: none; }
+ul.pagination li a:hover, ul.pagination li.active a { background: #0f6854; color: #fff; }*/
+/*Messages Success / Error*/
+.message { padding: 10px; margin: 10px 0; border-radius: 3px; text-align: center; font: 12pt/30px tahoma; }
+.messageSent { border: solid 1px #B2DBA1; background: linear-gradient(to bottom, #DFF0D8 0px, #C8E5BC 100%) repeat-x; color: #3C763D !important; text-align:center !important; }
+.messageError { border: solid 1px #DCA7A7; background: linear-gradient(to bottom, #F2DEDE 0px, #E7C3C3 100%) repeat-x; color: #A94442 !important; text-align:center !important; }

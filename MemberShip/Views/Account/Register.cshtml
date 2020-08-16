@@ -1,0 +1,302 @@
+﻿@model RegistrationVM
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "تسجيل طالب جديد";
+}
+<div class="breadcrumb-page">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Home")">الرئيسية</a></li>
+            <li class="active">@ViewBag.Title</li>
+        </ol>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="title-header text-center">
+            <h1>@ViewBag.Title</h1>
+        </div>
+        <div class="border"></div>
+
+        @*@if (ViewBag.CustomError != null)
+            {
+                @Html.Partial("~/Views/Shared/UcCustomError.cshtml", ViewBag.CustomError as string)
+            }
+
+            @if (ViewBag.CustomSuccess != null)
+            {
+                @Html.Partial("~/Views/Shared/UcCustomSuccess.cshtml", ViewBag.CustomSuccess as string)
+            }
+            else
+            {*@
+        <div class="row">
+            <div class="col-md-3">
+                <div class="side-widget">
+                    <div class="side-con">
+                        <ul class="cate">
+                            <li class="active">
+                                <a><i class="fa fa-angle-double-left"></i>البيانات الأساسية</a>
+                            </li>
+                            <li>
+                                <a><i class="fa fa-angle-double-left"></i>ملف المستخدم</a>
+                            </li>
+                            <li>
+                                <a><i class="fa fa-angle-double-left"></i>الدفع</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <form id="formRegister" class="order-price"
+                      asp-controller="Account" asp-action="Register" method="post">
+                    @Html.AntiForgeryToken()
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="required regi" asp-for="FullName"> اسم الطالب كاملا </label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-user"></span>
+                                    </span>
+                                    <input asp-for="FullName" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="required regi" asp-for="Email"> البريد الإلكترونى  </label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-envelope"></span>
+                                    </span>
+                                    <input asp-for="Email" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row officeContainer">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="required regi" asp-for="Password">كلمة السر  </label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-asterisk"></span>
+                                    </span>
+                                    <input asp-for="Password" type="password" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="required regi" asp-for="ConfirmPassword"> إعادة كلمة السر</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-asterisk"></span>
+                                    </span>
+                                    <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="required regi" asp-for="PhoneNumber">رقم المحمول</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-phone"></span>
+                                    </span>
+                                    <input asp-for="PhoneNumber" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="required regi" asp-for="ParentPhone">رقم وليد الامر</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-phone"></span>
+                                    </span>
+                                    <input asp-for="ParentPhone" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="required regi" asp-for="IDNo">رقم الهوية</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-phone"></span>
+                                    </span>
+                                    <input asp-for="IDNo" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="required regi" asp-for="Gender">النوع</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-globe"></span>
+                                    </span>
+                                    <select asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()" class="form-control">
+                                        <option value="-1">
+                                            من فضلك اختر النوع
+                                        </option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="required regi">@Resources.Site.Country</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-globe"></span>
+                                        </span>
+                                        @Html.DropDownList("country", ViewData["Countries"] as SelectList, Resources.Cpanel.PleaseChoose, new Dictionary<string, object> { { "onchange", "javascript:GetCitiesByCountry(this.value);" }, { "class", "form-control" }, { "data-val", "true" }, { "data-val-required", @Resources.Cpanel.Required } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="required regi">@Resources.Site.City</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-globe"></span>
+                                        </span>
+                                        @Html.DropDownListFor(m => m.CityId, new List<SelectListItem>(), @Resources.Cpanel.ChooseOption, new Dictionary<string, object> { { "class", "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="required regi"> @Resources.Users.Email </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-envelope"></span>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="required regi"> @Resources.Users.Password </label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-asterisk"></span>
+                                        </span>
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="regi"> @Resources.Site.Website</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-globe"></span>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Website, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="regi"> @Resources.Site.Twitter</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-twitter"></span>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Twitter, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="regi"> @Resources.Site.LinkedIn</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-linkedin"></span>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.LinkedIn, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+
+                    @*<input type="submit" value="Create" class="btn btn-primary" />*@
+                    <button class="btn btn-simple hvr-shutter-in-vertical pull-right"
+                            type="submit">
+                        التالى
+                        <i class="fa fa-chevron-left next" aria-hidden="true"></i>
+                    </button>
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </div>
+        @*}*@
+        @*<div class="clear"></div>
+            <div class="ima top"><a>@Html.Action("BlockDetails", "Node", new { id = 1033, view = "BlockDetailsImage" })</a></div>*@
+    </div>
+</section>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+    $(function () {
+        $("#formRegister").makeValidationInline();
+
+        checkOfficeAvailibility($("#CatId").val());
+        $("#CatId").change(function () {
+            checkOfficeAvailibility($("#CatId").val());
+        });
+    });
+
+    function checkOfficeAvailibility(catId) {
+        if (catId == "4")
+            $(".officeContainer").css("display", "none");
+        else
+            $(".officeContainer").css("display", "block");
+    }
+
+    function GetCitiesByCountry(countryId) {
+        var procemessage = "<option value=''>اختر من فضلك</option>";
+        $("#CityId").html(procemessage).show();
+        var url = '@Url.Action("GetCitiesByCountry", "Ajax")';
+        $.ajax({
+            url: url,
+            data: { countryId: countryId },
+            cache: false,
+            type: "POST",
+            success: function (data) {
+                var markup = "<option value=''>اختر من فضلك</option>";
+                for (var x = 0; x < data.length; x++) {
+                    markup += "<option value=" + data[x].Value + ">" + data[x].Text + "</option>";
+                }
+                $("#CityId").html(markup).show();
+            },
+            error: function (reponse) {
+                //alert("error : " + reponse);
+            }
+        });
+    }
+    </script>
+}
+
+

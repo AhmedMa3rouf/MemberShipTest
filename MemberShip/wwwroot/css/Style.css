@@ -1,0 +1,38 @@
+﻿body {
+position:static
+}
+.maindiv{
+    position:relative;
+}
+footer {
+    LEFT: 0;
+    background: #fafafa;
+    position: static;
+    BOTTOM: 0;
+    RIGHT: 0;
+}
+.footerParent {
+    position: relative;
+    height: auto;
+    bottom:0px
+}
+#wrapper{
+    height:fit-content;
+    min-height:650px;
+    margin-bottom:50px;
+}
+
+.dropdown-btn {
+    width: 100%;
+    background: 0;
+    padding: 7px 22px 7px 25px;
+    text-align: right;
+    display: inline-block;
+    border: 0;
+    font-size: 15px;
+}
+
+.dropdown-btn:hover {
+    background: #0b7e96;
+    color: #fff;
+}

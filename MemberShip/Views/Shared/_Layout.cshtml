@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+}
+@section sectionHead{
+    <link href="~/css/inner-style.css" rel="stylesheet" type="text/css" />
+    @RenderSection("sectionHead", required: false)
+}
+<div id="wrapper" class="clearfix">
+    <div id="preloader">
+        <div id="spinner">
+            <div class="preloader-dot-loading">
+                <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+            </div>
+        </div>
+        <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
+    </div>
+    <header id="header" class="header">
+        <div class="header-nav navbar-sticky-animated animated-active">
+            <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
+                <div class="container">
+                    @Html.Partial("~/Views/Shared/Languages.cshtml")
+                    @Html.Partial("~/Views/Shared/Menu.cshtml")
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        @RenderBody()
+    </section>
+</div>
+<div class="footerParent">
+
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+    <partial name="Footer.cshtml"/>
+</div>
+
+@section Scripts {
+
+    @RenderSection("Scripts", required: false)
+}

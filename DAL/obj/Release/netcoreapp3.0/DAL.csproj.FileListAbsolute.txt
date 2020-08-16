@@ -1,0 +1,8 @@
+F:\PL\WebProjects\MemberShip\DAL\bin\Release\netcoreapp3.0\DAL.deps.json
+F:\PL\WebProjects\MemberShip\DAL\bin\Release\netcoreapp3.0\DAL.dll
+F:\PL\WebProjects\MemberShip\DAL\bin\Release\netcoreapp3.0\DAL.pdb
+F:\PL\WebProjects\MemberShip\DAL\obj\Release\netcoreapp3.0\DAL.csprojAssemblyReference.cache
+F:\PL\WebProjects\MemberShip\DAL\obj\Release\netcoreapp3.0\DAL.AssemblyInfoInputs.cache
+F:\PL\WebProjects\MemberShip\DAL\obj\Release\netcoreapp3.0\DAL.AssemblyInfo.cs
+F:\PL\WebProjects\MemberShip\DAL\obj\Release\netcoreapp3.0\DAL.dll
+F:\PL\WebProjects\MemberShip\DAL\obj\Release\netcoreapp3.0\DAL.pdb

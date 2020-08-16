@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section sectionHead{
+    <link href="~/css/inner-style.css" rel="stylesheet" type="text/css" />
+    @*@RenderSection("sectionHead", required: false)*@
+}
+
+@RenderBody()
+
+@section Scripts {
+
+    @RenderSection("Scripts", required: false)
+}

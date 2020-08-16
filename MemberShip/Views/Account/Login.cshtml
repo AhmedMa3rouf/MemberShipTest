@@ -1,0 +1,116 @@
+﻿@model LoginVM
+
+@{
+    ViewBag.Title = "تسجيل الدخول";
+    Layout = "~/Views/Shared/_Internal.cshtml";
+    //var returnUrl = Request.QueryString["return"];
+}
+
+<div class="breadcrumb-page">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a asp-controller="Index" asp-action="Home">الرئيسية</a></li>
+            <li class="active">@ViewBag.Title</li>
+        </ol>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="title-header text-center">
+            <h1>@ViewBag.Title</h1>
+        </div>
+        <div class="border"></div>
+
+        @*@if (ViewBag.CustomSuccess != null)
+            {
+                @Html.Partial("~/Views/Shared/UcCustomSuccess.cshtml", ViewBag.CustomSuccess as string)
+            }
+
+            @if (ViewBag.CustomError != null)
+            {
+                @Html.Partial("~/Views/Shared/UcCustomError.cshtml", ViewBag.CustomError as string)
+            }*@
+        <div class="order-price login">
+            <div class="row">
+                <div class="col-md-9">
+                    <form method="post" asp-controller="Account" asp-action="Login"
+                          asp-route-returnurl="ReturnUrl" id="formLogin" asp-antiforgery="true">
+                        <div asp-validation-summary="ModelOnly"></div>
+
+                        <div class="form-group">
+                            <label class="regi" asp-for="UserEmail">البريد الإلكترونى</label>
+                            <input asp-for="UserEmail" class="form-control" />
+                            <span asp-validation-for="UserEmail"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password">كلمة السر</label>
+                            <input class="form-control" asp-for="Password" />
+                            <span asp-validation-for="Password"></span>
+                        </div>
+                        @*<input class="form-control" asp-for="ReturnUrl" />*@
+                        <div class="checkbox">
+                            <label class="regi" asp-for="RememberMe"><input asp-for="RememberMe" /> تذكرنى</label>
+
+                            <span asp-validation-for="RememberMe"></span>
+                        </div>
+
+                        <button class="btn btn-simple hvr-shutter-in-vertical" type="submit">تسجيل الدخول <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                        <div class="clear"></div>
+                    </form>
+
+                    @*@using (Html.BeginForm("ForgetPassword", "User", null, FormMethod.Post, new { enctype = "multipart/form-data", id = "formForgetPassword" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+
+                            <div class="form-group">
+                                <label class="regi"> @Resources.Users.Email</label>
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            </div>
+                            <div class="checkbox">
+                                <a href="#" class="pull-right lnkForgetPassword">@Resources.Users.Login</a>
+                            </div>
+                            <button class="btn btn-simple hvr-shutter-in-vertical" type="submit">@Resources.Users.SendPassword</button>
+                        }*@
+                </div>
+                <div class="col-md-3">
+                    <label for="name">ليس لديك حساب سجل الأن  </label>
+                    <a asp-controller="Account" asp-action="Register" class="moreat">سجل معنا الان</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style type="text/css">
+    #formForgetPassword {
+        display: none;
+    }
+</style>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        $(function () {
+            $("#formLogin").makeValidationInline();
+            $("#formForgetPassword").makeValidationInline();
+
+            var state = true;
+            $(".lnkForgetPassword").click(function (e) {
+                e.preventDefault();
+                if (state) {
+                    $("#formLogin").fadeOut(400, function () {
+                        $("#formForgetPassword").fadeIn(400);
+                    });
+                    state = false;
+                } else {
+                    $("#formForgetPassword").fadeOut(400, function () {
+                        $("#formLogin").fadeIn(400);
+                    });
+                    state = true;
+                }
+            });
+        });
+    </script>
+}

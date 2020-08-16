@@ -1,0 +1,38 @@
+@font-face
+{
+    font-family: "HelveticaNeue";
+    font-style: normal;
+    font-weight: normal;
+    src: url(HelveticaNeueW23-Reg.woff) format("woff"), url("HelveticaNeueW23-Reg.ttf") format("truetype"), url("HelveticaNeueW23-Reg.svg#HelveticaNeueLTArabic55Roman") format("svg");
+}
+@font-face
+{
+    font-family: "HelveticaNeue";
+    font-weight: bold;
+    src: url("HelveticaNeueW23-Bd.woff") format("woff"), url("HelveticaNeueW23-Bd.ttf") format("truetype"), url("HelveticaNeueW23-Bd.svg#HelveticaNeueLTArabic55Roman") format("svg");
+}
+
+/*@font-face
+{
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 400;
+    src: url("DroidKufi-Regular.eot");
+    src: url("DroidKufi-Regular.eot?#iefix") format('embedded-opentype'), url("DroidKufi-Regular.woff2") format('x-woff2'), url("DroidKufi-Regular.woff") format('woff'), url("DroidKufi-Regular.ttf") format('truetype');
+}
+@font-face
+{
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 700;
+    src: url("DroidKufi-Bold.eot");
+    src: url("DroidKufi-Bold.eot?#iefix") format('embedded-opentype'), url("DroidKufi-Bold.woff2") format('x-woff2'), url("DroidKufi-Bold.woff") format('woff'), url("DroidKufi-Bold.ttf") format('truetype');
+}
+
+@font-face
+{
+    font-family: 'ge-ss-med';
+    font-style: normal;
+    font-weight: 700;
+    src: url("droid/ge-ss-med.otf");
+}*/

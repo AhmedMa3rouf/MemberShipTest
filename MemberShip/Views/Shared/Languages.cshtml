@@ -1,0 +1,30 @@
+﻿<li class="lange"><a href="#" id="changeLang">En</a></li>
+
+<script type="text/javascript">
+    $(function () {
+        $("#changeLang").click(function (e) {
+            e.preventDefault();
+
+            var culture = "ar";
+
+            if (culture == "ar")
+                culture = "en";
+            else if (culture == "en")
+                culture = "ar";
+
+            SetCookie("SiteCulture", culture, 365);
+
+            //window.location.reload();
+
+            if (window.location.href.indexOf("/ar/") > -1) {
+                window.location = window.location.href.replace("/ar/", "/en/");
+            }
+            else if (window.location.href.indexOf("/en/") > -1) {
+                window.location = window.location.href.replace("/en/", "/ar/");
+            }
+            else {
+                window.location = window.location.href.concat("en/");
+            }
+        })
+    })
+</script>

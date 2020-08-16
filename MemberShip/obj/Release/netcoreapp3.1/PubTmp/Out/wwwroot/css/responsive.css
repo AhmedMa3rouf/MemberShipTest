@@ -1,0 +1,88 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+ 
+ 
+/*==========  Mobile First Method  ==========*/
+ 
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+ 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .header-nav.navbar-sticky-animated.animated-active li.lange {
+        padding: 18px 0;
+    }
+    div.bhoechie-tab-menu {
+        margin-bottom: 10px;
+    }
+    .small-title li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .pull-left {
+        float: none !important;
+    }
+    .welcom-Usr {
+    float: none !important;
+        margin: 0 !important;
+    border-bottom: 1px solid #dddd;
+}
+    .register {
+        text-align: center;
+    }
+    .register .dropdown-menu {
+        min-width: auto !important;
+        left: -7px;
+    }
+    .register li {
+        float: none !important;
+        display: inline-block;
+    }
+    html[dir=rtl] .menuzord-responsive .menuzord-menu li .indicator {
+    right: auto;
+    left: 0 !important;
+    }
+    .navbar-sticky-animated li.lange {
+    padding: 18px 0;
+}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 360px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 319px) {
+}

@@ -1,0 +1,9 @@
+﻿@*@{
+    MvcCms.Models.Entities.C_UserItems user = (MvcCms.Models.Entities.C_UserItems)Session["UserDetails"];
+    if (user == null)
+    {
+        <li>
+            <a href="@Url.Action("Login", "User")">@Resources.Site.LoginRegister</a>
+        </li>
+    }
+}*@

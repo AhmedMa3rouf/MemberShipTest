@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "ProcessPayment";
+}
+
+@section sectionHead{
+    <style>
+        #telr {
+            width: 100%;
+            min-width: 600px;
+            height: 600px;
+            frameborder: 0;
+        }
+    </style>
+}
+<section class="section">
+    <div class="container">
+        <div class="title-header text-center">
+            <h1>@ViewBag.Title</h1>
+        </div>
+        <div class="border"></div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="side-widget">
+                    <div class="side-con">
+                        <ul class="cate">
+                            <li class="active">
+                                <a><i class="fa fa-angle-double-left"></i>البيانات الأساسية</a>
+                            </li>
+                            <li>
+                                <a><i class="fa fa-angle-double-left"></i>ملف المستخدم</a>
+                            </li>
+                            <li>
+                                <a><i class="fa fa-angle-double-left"></i>الدفع</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div>
+                    <iframe id="telr" src="@ViewBag.PaymentURL"></iframe>
+                    @*<iframe id="telr" src="https://secure.telr.com/gateway/process_framed_full.html?o=@ViewBag.PaymentURL"></iframe>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

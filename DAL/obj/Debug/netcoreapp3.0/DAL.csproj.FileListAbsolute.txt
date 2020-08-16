@@ -1,0 +1,17 @@
+G:\Ma3rouf\SampleCode\QuickApp\QuickApp\DAL\bin\Debug\netcoreapp3.0\DAL.deps.json
+G:\Ma3rouf\SampleCode\QuickApp\QuickApp\DAL\bin\Debug\netcoreapp3.0\DAL.dll
+G:\Ma3rouf\SampleCode\QuickApp\QuickApp\DAL\bin\Debug\netcoreapp3.0\DAL.pdb
+G:\Ma3rouf\SampleCode\QuickApp\QuickApp\DAL\obj\Debug\netcoreapp3.0\DAL.csprojAssemblyReference.cache
+G:\Ma3rouf\SampleCode\QuickApp\QuickApp\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfoInputs.cache
+G:\Ma3rouf\SampleCode\QuickApp\QuickApp\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfo.cs
+G:\Ma3rouf\SampleCode\QuickApp\QuickApp\DAL\obj\Debug\netcoreapp3.0\DAL.dll
+G:\Ma3rouf\SampleCode\QuickApp\QuickApp\DAL\obj\Debug\netcoreapp3.0\DAL.pdb
+F:\PL\WebProjects\MemberShip\DAL\bin\Debug\netcoreapp3.0\DAL.deps.json
+F:\PL\WebProjects\MemberShip\DAL\bin\Debug\netcoreapp3.0\DAL.dll
+F:\PL\WebProjects\MemberShip\DAL\bin\Debug\netcoreapp3.0\DAL.pdb
+F:\PL\WebProjects\MemberShip\DAL\obj\Debug\netcoreapp3.0\DAL.csprojAssemblyReference.cache
+F:\PL\WebProjects\MemberShip\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfoInputs.cache
+F:\PL\WebProjects\MemberShip\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfo.cs
+F:\PL\WebProjects\MemberShip\DAL\obj\Debug\netcoreapp3.0\DAL.dll
+F:\PL\WebProjects\MemberShip\DAL\obj\Debug\netcoreapp3.0\DAL.pdb
+F:\PL\WebProjects\MemberShip\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CoreCompileInputs.cache
